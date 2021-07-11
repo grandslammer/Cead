@@ -13,6 +13,12 @@ nav {
   background-color: var(--dark-color);
 }
 
+nav,
+main {
+  font-family: "Annie Use Your Telescope", cursive;
+  font-size: x-large;
+}
+
 footer {
   background-color: var(--dark-color);
   padding-right: 1rem;
