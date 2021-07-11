@@ -1,2 +1,2 @@
-# JsSiteTemplate
-Site Template for Mini JS Projects
+# Céad
+Céad - A Coding Project. Zero To 100.
