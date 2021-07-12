@@ -84,9 +84,40 @@ endValue = parseInt(endValue)
 if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
   let numbers = generateNumbers(startValue, endValue)
   displayNumbers(numbers)
-} else {
-alert("You must enter integers")
+  } else {
+  alert("You must enter integers")
+  }
 }
+
+//generate numbers from start value to the end value
+//logic function
+function generateNumbers(sValue, eValue) {
+  let numbers = []
+
+  for (let i = sValue; i <= eValue; i++) {
+    numbers.push(i)
+  }
+  
+  return numbers
+}
+
+//display the numbers and mark the evennumbers bold 
+//view function
+function displayNumbers(numbers) { 
+  let templateRows="" 
+  for (let i=0; i < numbers.length;i++) {
+    let className="even" let number=numbers[i]
+    if (number % 2==0) {
+      className="even"
+    } else {
+      className="odd"
+    }
+  //This does not render correctly with Prism - see the source on Github
+  templateRows +=`<tr>
+  <td class="${className}">${number}</td>
+  </tr>`
+  }
+  document.getElementById("results").innerHTML = templateRows
 }
           </code>
         </pre>
