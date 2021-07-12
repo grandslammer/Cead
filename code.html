@@ -13,7 +13,6 @@
 
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-  <link rel="stylesheet" href="/css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +21,8 @@
   <link rel="stylesheet" href="css/prism.css">
 
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -69,8 +70,23 @@
         </div>
         <div class="col col-lg-8">
           <pre class="line-numbers"><code class="language-javascript">
-function helloWorld() {
-alert("Hello World!")
+//get the values from the page
+//controller function
+function getValues() {
+let startValue = document.getElementById("startValue").value
+let endValue = document.getElementById("endValue").value
+let numbers = []
+
+// attempt to parse into integers
+startValue = parseInt(startValue)
+endValue = parseInt(endValue)
+
+if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+  let numbers = generateNumbers(startValue, endValue)
+  displayNumbers(numbers)
+} else {
+alert("You must enter integers")
+}
 }
           </code>
         </pre>

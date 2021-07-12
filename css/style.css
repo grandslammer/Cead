@@ -5,6 +5,14 @@
   --white-color: #dff3e4;
 }
 
+.odd {
+  font-weight: 100;
+}
+
+.even {
+  font-weight: bolder;
+}
+
 body {
   color: var(--dark-color);
 }
@@ -16,7 +24,6 @@ nav {
 nav,
 main {
   font-family: "Annie Use Your Telescope", cursive;
-  font-size: x-large;
 }
 
 footer {
